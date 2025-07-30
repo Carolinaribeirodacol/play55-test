@@ -2,7 +2,7 @@
 Este desafio foi desenhado para avaliarmos tecnicamente suas habilidades e simular um dia de trabalho em nossa equipe e nos ajudar a entender como você aborda desafios de desenvolvimento.
 
 
-
+----
 
 
 # Nuxt Minimal Starter
