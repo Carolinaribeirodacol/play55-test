@@ -18,7 +18,7 @@
       </header>
 
       <p v-if="cart.items.length === 0" class="text-center font-semibold p-8">
-        Seu carrinho esta vazio
+        Seu carrinho está vazio.
       </p>
 
       <span v-else>
