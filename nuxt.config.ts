@@ -6,5 +6,10 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image', '@nuxtjs/tailwindcss', '@pinia/nuxt'],
   image: {
     dir: 'public',
+  },
+  runtimeConfig: {
+    public: {
+      recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
+    }
   }
 })

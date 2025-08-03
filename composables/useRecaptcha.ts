@@ -1,5 +1,5 @@
 export function useRecaptcha() {
-  const siteKey = '6LfTVC8rAAAAAISI8s59lF0JcXMq_XfgsHsepO5U'
+  const siteKey = useRuntimeConfig().public.recaptchaSiteKey
 
   const loadScript = () => {
     return new Promise<void>((resolve) => {
