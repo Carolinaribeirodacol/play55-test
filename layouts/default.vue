@@ -16,7 +16,8 @@
 <script setup lang="ts">
 import { useProductStore } from "@/stores/product";
 import CartModal from "~/components/CartModal.vue";
-import Footer from "~/components/Footer.vue";
+import Footer from "~/components/layout/Footer.vue";
+import Header from "~/components/layout/Header.vue";
 
 const productStore = useProductStore();
 
