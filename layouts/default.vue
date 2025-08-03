@@ -44,48 +44,7 @@
     </main>
 
     <!-- Rodapé -->
-    <footer class="bg-[#1F2937] text-white mt-10 py-10 px-4">
-      <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Coluna 1 -->
-        <div>
-          <h3 class="font-semibold mb-2">MinhaLoja</h3>
-          <p class="text-sm text-gray-300">
-            Sua loja online de confiança para encontrar os melhores produtos com os melhores preços.
-          </p>
-        </div>
-
-        <!-- Coluna 2 -->
-        <div>
-          <h3 class="font-semibold mb-2">Links</h3>
-          <ul class="text-sm text-gray-300 space-y-1">
-            <li><a href="#" class="hover:underline">Início</a></li>
-            <li><a href="#" class="hover:underline">Produtos</a></li>
-            <li><a href="#" class="hover:underline">Sobre Nós</a></li>
-            <li><a href="#" class="hover:underline">Política de Privacidade</a></li>
-          </ul>
-        </div>
-
-        <!-- Coluna 3 -->
-        <div>
-          <h3 class="font-semibold mb-2">Fale Conosco</h3>
-          <form class="space-y-2 text-sm">
-            <input type="text" placeholder="Seu nome" class="w-full px-3 py-2 rounded bg-[#374151]" />
-            <input type="email" placeholder="Seu e-mail" class="w-full px-3 py-2 rounded bg-[#374151]" />
-            <input type="tel" placeholder="Seu telefone" class="w-full px-3 py-2 rounded bg-[#374151]" />
-            <input type="date" class="w-full px-3 py-2 rounded bg-[#374151]" />
-            <textarea placeholder="Sua mensagem" class="w-full px-3 py-2 rounded h-24 bg-[#374151]"></textarea>
-            <button type="submit" class="w-full bg-[#4F46E5] text-white py-2 rounded hover:bg-indigo-700 transition">
-              Enviar Mensagem
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <!-- Créditos -->
-      <div class="text-center text-sm text-gray-400 mt-6">
-        © 2024 MinhaLoja. Todos os direitos reservados.
-      </div>
-    </footer>
+    <Footer />
   </div>
 </template>
 
@@ -94,6 +53,7 @@ import { Icon } from "@iconify/vue";
 import { useCartStore } from "@/stores/cart";
 import { useProductStore } from '@/stores/product';
 import CartModal from "~/components/CartModal.vue";
+import Footer from "~/components/Footer.vue";
 
 const cart = useCartStore();
 const productStore = useProductStore();
