@@ -69,6 +69,7 @@ import { reactive, ref, onMounted, onBeforeUnmount } from "vue";
 import { z, ZodError } from "zod";
 import { useRecaptcha } from "@/composables/useRecaptcha";
 import IMask from "imask";
+import type { InputMask } from "imask"
 
 interface FormData {
   nome: string;
@@ -99,7 +100,7 @@ const errors = reactive<FormErrors>({
 });
 
 const telefoneInput = ref<HTMLInputElement | null>(null);
-let mask: IMask.InputMask | null = null;
+let mask: InputMask | null = null
 
 onMounted(() => {
   if (telefoneInput.value) {
