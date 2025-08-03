@@ -1,8 +1,10 @@
 <template>
-	<div>
-		<p class="text-white bg-[#000]">Teste 1234</p>
+	<div class="min-h-screen bg-gray-100 text-gray-900">
+		<NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+
 		<NuxtRouteAnnouncer />
-		<NuxtWelcome />
 	</div>
 </template>
 
