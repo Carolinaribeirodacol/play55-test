@@ -3,18 +3,18 @@
     <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
       <div>
         <h3 class="font-semibold mb-2">MinhaLoja</h3>
-        <p class="text-sm text-gray-300">
+        <p class="text-sm text-[#9CA3AF]">
           Sua loja online de confiança para encontrar os melhores produtos com os melhores preços.
         </p>
       </div>
 
       <div>
         <h3 class="font-semibold mb-2">Links</h3>
-        <ul class="text-sm text-gray-300 space-y-1">
-          <li><a href="#" class="hover:underline">Início</a></li>
-          <li><a href="#" class="hover:underline">Produtos</a></li>
-          <li><a href="#" class="hover:underline">Sobre Nós</a></li>
-          <li><a href="#" class="hover:underline">Política de Privacidade</a></li>
+        <ul class="text-sm text-gray-300 space-y-3">
+          <li><a href="#" class="hover:underline text-[#9CA3AF]">Início</a></li>
+          <li><a href="#" class="hover:underline text-[#9CA3AF]">Produtos</a></li>
+          <li><a href="#" class="hover:underline text-[#9CA3AF]">Sobre Nós</a></li>
+          <li><a href="#" class="hover:underline text-[#9CA3AF]">Política de Privacidade</a></li>
         </ul>
       </div>
 

@@ -3,6 +3,7 @@ export function useRecaptcha() {
 
   const loadScript = () => {
     return new Promise<void>((resolve) => {
+      if (!process.client) return resolve()
       if (window.grecaptcha) return resolve()
 
       const script = document.createElement('script')
@@ -18,10 +19,9 @@ export function useRecaptcha() {
     await loadScript()
 
     return new Promise((resolve) => {
+      if (!process.client) return resolve('')
       window.grecaptcha.ready(() => {
-        window.grecaptcha.execute(siteKey, { action }).then((token: string) => {
-          resolve(token)
-        })
+        window.grecaptcha.execute(siteKey, { action }).then(resolve)
       })
     })
   }
