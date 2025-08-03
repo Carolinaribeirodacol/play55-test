@@ -5,13 +5,13 @@
     </button>
     <img :src="props.product.image" alt="product-image" class="h-40 mx-auto object-contain mb-6" />
 
-    <h2 class="font-semibold text-sm truncate overflow-hidden whitespace-nowrap">{{ props.product.title }}</h2>
+    <h2 class="text-lg font-semibold truncate overflow-hidden whitespace-nowrap">{{ props.product.title }}</h2>
     <p class="text-sm text-gray-400">{{ props.product.category }}</p>
-    <p class="text-gray-800 font-bold">{{ formatPrice(props.product.price) }}</p>
+    <p class="text-lg font-semibold text-gray-800">{{ formatPrice(props.product.price) }}</p>
 
     <button
       @click="handleAddToCart"
-      class="bg-[#4F46E5] text-white py-2 rounded-lg hover:bg-indigo-700 transition w-full self-end mt-2"
+      class="bg-blueViolet hover:bg-indigo-700 text-white py-2 rounded-lg hover:bg-indigo-700 transition w-full self-end mt-2"
     >
       Adicionar
     </button>

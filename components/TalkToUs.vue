@@ -5,7 +5,7 @@
         v-model="form.nome"
         type="text"
         placeholder="Seu nome"
-        class="w-full px-3 py-2 rounded border border-[#4B5563] bg-[#374151] text-[#9CA3AF]"
+        class="w-full px-3 py-2 rounded border border-riverBed bg-oxfordBlue text-[#9CA3AF]"
         :class="{ 'border-red-500': errors.nome }"
       />
       <p v-if="errors.nome" class="text-red-600 text-sm mt-1">{{ errors.nome }}</p>
@@ -16,7 +16,7 @@
         v-model="form.email"
         type="email"
         placeholder="Seu e-mail"
-        class="w-full px-3 py-2 rounded border border-[#4B5563] bg-[#374151] text-[#9CA3AF]"
+        class="w-full px-3 py-2 rounded border border-riverBed bg-oxfordBlue text-[#9CA3AF]"
         :class="{ 'border-red-500': errors.email }"
       />
       <p v-if="errors.email" class="text-red-600 text-sm mt-1">{{ errors.email }}</p>
@@ -26,8 +26,8 @@
       <input
         ref="telefoneInput"
         type="tel"
-        placeholder="(00) 00000-0000"
-        class="w-full px-3 py-2 rounded border border-[#4B5563] bg-[#374151] text-[#9CA3AF]"
+        placeholder="Seu telefone"
+        class="w-full px-3 py-2 rounded border border-riverBed bg-oxfordBlue text-[#9CA3AF]"
         :class="{ 'border-red-500': errors.telefone }"
       />
       <p v-if="errors.telefone" class="text-red-600 text-sm mt-1">{{ errors.telefone }}</p>
@@ -37,7 +37,7 @@
       <input
         v-model="form.nascimento"
         type="date"
-        class="w-full px-3 py-2 rounded border border-[#4B5563] bg-[#374151] text-[#9CA3AF]"
+        class="w-full px-3 py-2 rounded border border-riverBed bg-oxfordBlue text-[#9CA3AF]"
         :class="{ 'border-red-500': errors.nascimento }"
         max="2024-12-31"
       />
@@ -48,7 +48,7 @@
       <textarea
         v-model="form.mensagem"
         placeholder="Sua mensagem"
-        class="w-full px-3 py-2 rounded border border-[#4B5563] bg-[#374151] text-[#9CA3AF] h-24 resize-none"
+        class="w-full px-3 py-2 rounded border border-riverBed bg-oxfordBlue text-[#9CA3AF] h-24 resize-none"
         :class="{ 'border-red-500': errors.mensagem }"
       ></textarea>
       <p v-if="errors.mensagem" class="text-red-600 text-sm mt-1">{{ errors.mensagem }}</p>
