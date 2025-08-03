@@ -70,6 +70,48 @@
           }}</span>
         </div>
 
+        <div class="mt-6">
+          <label
+            for="coupon"
+            class="block text-sm font-medium text-gray-700 mb-2"
+          >
+            Possui um cupom?
+          </label>
+
+          <div class="flex gap-2 mb-4">
+            <input
+              v-model="couponCode"
+              id="coupon"
+              type="text"
+              placeholder="Digite seu cupom"
+              class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            />
+            <button
+              @click="validateCoupon"
+              class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded-md transition"
+            >
+              Aplicar
+            </button>
+          </div>
+
+          <transition name="fade">
+            <div
+              v-if="couponError"
+              class="mt-2 text-sm text-red-600 flex items-center gap-1 mb-4"
+            >
+              <Icon icon="mdi:alert-circle" class="text-xl" /> {{ couponError }}
+            </div>
+          </transition>
+
+          <div
+            v-if="cart.isValidCoupon"
+            class="my-4 p-2 text-sm rounded bg-green-50 text-green-700 border border-green-200"
+          >
+            Cupom <strong>{{ cart.coupon }}</strong> aplicado! Desconto de
+            <strong>{{ cart.discount * 100 }}%</strong>.
+          </div>
+        </div>
+
         <button
           @click="cart.checkout"
           class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg font-semibold transition"
@@ -86,4 +128,16 @@ import { useCartStore } from "@/stores/cart";
 import { formatPrice } from "@/utils/format";
 
 const cart = useCartStore();
+const couponCode = ref("");
+const couponError = ref("");
+
+const validateCoupon = async () => {
+  couponError.value = "";
+
+  try {
+    await cart.applyCoupon(couponCode.value);
+  } catch (error) {
+    couponError.value = "Cupom inválido ou expirado.";
+  }
+};
 </script>
